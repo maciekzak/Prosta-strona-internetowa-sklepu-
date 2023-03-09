@@ -1,0 +1,441 @@
+/* Ogólne stylizacje strony */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #444;
+  background-color: #f8f8f8;
+}
+
+/* Nagłówek strony */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #00bfff;
+}
+
+/* Główna nawigacja */
+nav {
+  display: flex;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: #ddd;
+  transform: translateY(-3px);
+}
+
+/* Pole wyszukiwania */
+form {
+  display: flex;
+  align-items: center;
+}
+
+#search {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-right: none;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+#search:focus {
+  width: 70%;
+  border-color: #00bfff;
+}
+
+/* Przycisk logowania */
+#login-button {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#login-button:hover {
+  transform: translateY(-3px);
+}
+
+/* Formularz logowania */
+#login-form {
+  position: absolute;
+  right: 20px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: none;
+}
+
+#login-form label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#login-form input[type="email"],
+#login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+#login-form input[type="submit"] {
+  margin-top: 20px;
+  background-color: #00bfff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#login-form input[type="submit"]:hover {
+  background-color: #00a5d6;
+}
+
+/* Lewy panel z rozwijaną listą z kategoriami */
+aside {
+  width: 200px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+aside details {
+  cursor: pointer;
+}
+
+  aside summary {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px;
+    outline: none;
+  }
+  
+  aside summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  aside ul {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+  }
+  
+  aside li {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  aside li p {
+    margin: 0;
+    padding: 0px 0;
+    }
+
+  aside li:hover {
+    transform: translateX(5px);
+  }
+  
+  /* Lista produktów */
+  main ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  main li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  main ul li{
+      border: 1px solid #ccc;
+      margin: 10px 0;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);  
+  }
+  
+  main li:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+  }
+  
+  main img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  main h3 {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  main p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  main button {
+    background-color: #00bfff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  main button:hover {
+    background-color: #00a5d6;
+    transform: translateY(-3px);
+  }
+/* Podsumowanie zakupów */
+  ul li .add-to-cart-button {
+    margin: 10px 0;
+    background-color: #00bfff;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    }
+
+  
+  #cart {
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+  }
+  
+  #cart h2 {
+    font-size: 22px;
+    margin: 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #00bfff;
+  }
+  
+  #cart ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #cart li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  #cart li:last-of-type {
+    border-bottom: none;
+  }
+  
+  #cart #cart-total {
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+   #cart #cart-total .total-price {
+    color: #444;
+  }
+
+  #cart .product-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #444;
+  }
+  main ul.cart-items li {
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  #cart .product-price {
+    font-size: 16px;
+    color: #666;
+  }
+  
+   #toggle-dark-mode-button {
+    background-color: #fff;
+    color: #444;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+   #toggle-dark-mode-button:hover {
+    background-color: #fff;
+  }
+
+  /* Stopka strony */
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #00bfff;
+    color: #fff;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  footer a:hover {
+    color: #ddd;
+  }
+  
+  /* Formularz "Kup teraz" */
+  
+  #buy-now-form #close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    color: #000;
+    
+  }
+
+#buy-now-form {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 250px;
+  background-color: #fff;
+  color: #444;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+  
+  #buy-now-form h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  }
+  
+  #buy-now-form p {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  }
+  
+  #buy-now-form form {
+  display: flex;
+  flex-direction: column;
+  }
+
+  #buy-now-form .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  #buy-now-form input[type="text"],
+  #buy-now-form input[type="email"],
+  #buy-now-form input[type="address"],
+  #buy-now-form input[type="city"],
+  #buy-now-form input[type="zipCode"],
+  #buy-now-form input[type=" deliverymethod"],
+  #buy-now-form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 5px;
+  }
+  
+  #buy-now-form input[type="submit"] {
+  margin-top: 20px;
+  background-color: #00bfff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  }
+
+
+  /* Responsywność */
+  @media screen and (max-width: 800px) {
+    main {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    header h1 {
+      margin-bottom: 10px;
+    }
+  
+    header nav {
+      margin-top: 10px;
+    }
+  
+    main {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+

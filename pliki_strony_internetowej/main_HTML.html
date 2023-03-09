@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sklep internetowy</title>
+  <!-- Odnośniki do stylow -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="dark-mode.css">
+ 
+</head>
+<body>
+  <!-- Nagłówek strony -->
+  <header>
+    <h1>Sklep internetowy</h1>
+    <nav>
+      <a href="#">Strona główna</a>
+      <a href="#">Kategorie</a>
+      <a href="#">Promocje</a>
+      <a href="#">Kontakt</a>
+    </nav>
+    <!-- Pole wyszukiwania -->
+    <form >
+      <input type="text" id="search" placeholder="Szukaj produktów">
+    </form>
+    <!-- Przycisk logowania -->
+    <button id="login-button">Zaloguj się</button>
+  </header>
+
+  <!-- Formularz logowania -->
+<div id="login-form" style="display: none; float: right;">
+    <form>
+      <label for="email">Adres e-mail:</label><br>
+      <input type="email" id="email" name="email"><br>
+      <label for="password">Hasło:</label><br>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="submit" value="Zaloguj się">
+    </form>
+  </div>
+  
+  <!-- Przycisk do zmiany trybu na ciemny -->
+  <button id="toggle-dark-mode-button" data-text="Przełącz na tryb jasny">Przełącz na tryb ciemny</button>
+
+  <!-- Główna treść strony -->
+  <main>
+    <!-- Lewy panel z rozwijaną listą z kategoriami -->
+    <aside>
+      <details>
+        <summary>Kategorie</summary>
+        <ul>
+          <li>Odzież</li>
+          <li>Obuwie</li>
+          <li>Akcesoria</li>
+          <li>Biżuteria</li>
+          <li>Zabawki</li>
+        </ul>
+      </details>
+    </aside>
+
+    <!-- Lista produktów -->
+    <ul>
+      <li data-name="koszula" data-price="99.99">
+        <h3>Koszula</h3>
+        <img src="koszula.jpg" alt="Zdjęcie koszuli">
+        <p>Ładna biała koszula o klasycznym kroju.</p>
+        <p>Cena: 99,99 zł</p>
+        <button class="add-to-cart-button">Dodaj do koszyka</button>
+      </li>
+      <li data-name="spodnie" data-price="149.99">
+        <h3>Spodnie</h3>
+        <img src="spodnie.jpg" alt="Zdjęcie spodni">
+        <p>Wygodne spodnie z wysokiej jakości tkaniny.</p>
+        <p>Cena: 149,99 zł</p>
+        <button class="add-to-cart-button">Dodaj do koszyka</button>
+      </li>
+      <li data-name="buty" data-price="199.99">
+        <h3>Buty</h3>
+        <img src="buty.jpg" alt="Zdjęcie butów">
+        <p>Eleganckie skórzane buty o uniwersalnym kroju.</p>
+        <p>Cena: 199,99 zł</p>
+
+        <button class="add-to-cart-button">Dodaj do koszyka</button>
+
+      </li>
+      </ul>
+      
+            <!-- Podsumowanie zakupów -->
+      <section id="cart">
+        <h2>Koszyk</h2>
+        <ul id="cart-items">
+          <!-- Tutaj będą wyświetlane produkty dodane do koszyka -->
+          
+          <!-- Tworzę formularz do przycisku kup teraz -->
+        </ul>
+        <div id="buy-now-form" style="display: none;">
+          <form>
+            <button id="close-button" type="button">X</button>
+            <label for="name">Imię i nazwisko:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Adres e-mail:</label><br>
+            <input type="email" id="email" name="email" value=""><br>
+            <label for="address">Adres:</label><br>
+            <input type="address" id="address" name="address"><br>
+            <label for="city">Miasto:</label><br>
+            <input type="city" id="city" name="city"><br>
+            <label for="zipCode">Kod Pocztowy:</label><br>
+            <input type="zipCode" id="zipCode" name="zipCode"><br>
+            <label for="deliverymethod">Sposób dostawy:</label><br>
+            <select id="deliverymethod" name="deliverymethod" type="deliverymethod">
+              <option value="kurier">Kurier</option>
+              <option value="odbior-osobisty">Odbiór osobisty</option>
+              <option value="poczta">Poczta</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Kup teraz">
+          </form>
+        </div>
+        <!-- Pole wyświetlające całkowity koszt zakupów -->
+
+        <p id="cart-total">Całkowity koszt: <span id="cart-total-price">0</span> zł</p>
+        <button id="buy-now-button" class="hidden">Kup teraz</button>
+      </section>
+      
+      </main>
+      <!-- Stopka strony -->
+      <footer>
+        <p>Copyright &copy; Sklep internetowy</p>
+      </footer>
+        <!-- Skrypt JavaScript -->
+  <script src="skrypt.js"></script>
+    
+      
+            </body>
+            </html>
+
